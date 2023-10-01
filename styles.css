@@ -69,3 +69,21 @@ header {
   .landing_text button {
     /* Add styles for the button */
   }
+
+  .second_inner{
+    padding: 2rem;
+    line-height: 1.5;
+  }
+
+  .sellingpoints{
+    padding: 2.5rem;
+    line-height: 1.5;
+  }
+  .point{
+    padding-top: 18px;
+  }
+
+  .callToAction{
+    background-color: #e0e0e0;
+    border: 1px solid #ffff;
+  }
