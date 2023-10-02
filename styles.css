@@ -73,6 +73,8 @@ header {
   .second_inner{
     padding: 2rem;
     line-height: 1.5;
+    max-width: 50%;
+    margin: auto;
   }
 
   .sellingpoints{
@@ -87,3 +89,75 @@ header {
     background-color: #e0e0e0;
     border: 1px solid #ffff;
   }
+
+
+/* SECTION 3 STYLING */
+/* Default styles for the section */
+.section3 {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.inner_section3 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sellingpoints {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row on smaller screens */
+  justify-content: space-between; /* Space evenly between columns */
+}
+
+.point {
+  flex: 1; /* Equal width for all columns */
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for screens smaller than 768px (mobile) */
+@media (max-width: 768px) {
+  .sellingpoints {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .point {
+    flex: 0; /* Reset flex value for stacked columns */
+    margin: 10px 0; /* Add vertical spacing between stacked columns */
+  }
+}
+
+
+/* SECTION 4: SERVICES */
+/* Default styles for the section */
+.content4 {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.inner-content4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row on smaller screens */
+  justify-content: center; /* Center columns horizontally */
+}
+
+.services {
+  flex: 0 0 calc(33.33% - 20px); /* Equal width for 3 columns with spacing between */
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: #f7f7f7;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for screens smaller than 768px (mobile) */
+@media (max-width: 768px) {
+  .services {
+    flex-basis: calc(100% - 20px); /* Full width for stacked columns on mobile */
+    margin: 10px 0; /* Add vertical spacing between stacked columns */
+  }
+}
