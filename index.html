@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <title>NPO Granting Writing</title>
 </head>
 <body>
@@ -14,19 +15,26 @@
         <div class="wrapper_inner">
             <header class="page_header with_hover_bg_color fixed scrolled">
                 <div class="header_inner clearfix">
+                  <div class="header_logo">
+                    <img class="navlogo" src="./public/images/quill logo 1.png">
+                  </div>
+                  <div class="header_title">
                     <h3>NPO Grant Writing</h3>
+                  </div>
                 </div>
-            </header>
+              </header>
+              
             <div class="content">
                 <div class="context_inner">
                     <!-- use this for the background image -->
                     <div class="q_slider">
                         <div class="landing_text">
                             <!-- put logo image -->
-                            <h3>Applying for a grant?</h3>
-                            <h1>We CAN HELP!</h1>
+                            <img class="logo" src="./public/images/quill logo 1.png">
+                            <h3 class="landingwords">Applying for a grant?</h3>
+                            <h1 class="landingwords">We CAN HELP!</h1>
                             <div>
-                                <button>Contact Us Today</button>
+                                <button class="calltoactionbtn">Contact Us Today</button>
                             </div>
                         </div>
                     </div>
@@ -84,6 +92,7 @@
                         <h3>Every non-profit is different.</h3>
                         <p>We believe in tailoring our services to the needs and goals of each
                             individual client. Call/email for an informational meeting and cost proposal for services offered.</p>
+                        <button class="calltoactionbtn">Contact Us Today</button>
                     </div>
                 </div>
             </div>
@@ -91,23 +100,100 @@
                 <h3>What We Do</h3>
                 <div class="inner-content4">
                     <div class="services hoverEffect">
-                        <h4>Grant Writing</h4>
+                        <div class="flip-card ">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <!-- Front face content -->
+                                <img class="servicesLogo" src="./public/images/icons8-pencil-90.png" alt="Service Icon">
+                                <h4>Grant Writing</h4>
+                              </div>
+                              <div class="flip-card-back">
+                                <!-- Back face content -->
+                                <p>Have you been setting aside time to write your own proposals, but require a professional editing service to ensure your writing and research data are top-notch?</p>
+                                
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="services ">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <!-- Front face content -->
+                                <img class="servicesLogo" src="./public/images/icons8-book-100.png" >
+                                <h4>Grant Research</h4>
+                              </div>
+                              <div class="flip-card-back">
+                                <!-- Back face content -->
+                                <p>Do you know of a grant opportunity that you feel your non-profit organization would be the perfect match for, but lack the time and personnel to commit to the rigorous process the grant opportunity entails?
+                                </p>
+                                
+                              </div>
+                            </div>
+                        </div>
+                       
+                        
+
+                    </div>
+   
+                    <div class="services">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <!-- Front face content -->
+                                <img class="servicesLogo" src="./public/images/icons8-government-100.png" >
+                                <h4>Federal, State Grants and More</h4>
+                              </div>
+                              <div class="flip-card-back">
+                                <!-- Back face content -->
+                                <p>Not sure what grants are available? We handle Federal and State grants and more!</p>
+                                
+                              </div>
+                            </div>
+                        </div>
+                        
+                        
+
+                    </div>
+                    <div class="services">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <!-- Front face content -->
+                                <img class="servicesLogo" src="./public/images/icons8-professional-100.png" >
+                                <h4>Professionally Written and Edited</h4>
+                              </div>
+                              <div class="flip-card-back">
+                                <!-- Back face content -->
+                                <p>Do you need the entire grant process, from start to funding, handled for you professionally?
+                                </p>
+                                
+                              </div>
+                            </div>
+                        </div>
+
+                        
+                       
 
                     </div>
                     <div class="services hoverEffect">
-                        <h4>Grant Research</h4>
-
-                    </div>
-                    <div class="services hoverEffect">
-                        <h4>Federal, State Grants and More</h4>
-
-                    </div>
-                    <div class="services hoverEffect">
-                        <h4>Professionally Written and Edited</h4>
-
-                    </div>
-                    <div class="services hoverEffect">
-                        <h4>Consultations</h4>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <!-- Front face content -->
+                                <img class="servicesLogo" src="./public/images/icons8-consultation-80.png" >
+                                <h4>Consultations</h4>
+                              </div>
+                              <div class="flip-card-back">
+                                <!-- Back face content -->
+                                <p>We provide a consulative approach to identify all the unique grants available for your unique Non Profit!</p>
+                                
+                              </div>
+                            </div>
+                        </div>
+                        
+                        
 
                     </div>
 
@@ -137,6 +223,22 @@
             </div>
         </div>
     </div>
-    
+    <script >
+        var servicesElements = document.querySelectorAll('.services');
+
+        // Add click event listeners to each services element
+        servicesElements.forEach(function(serviceElement) {
+        serviceElement.addEventListener('click', function() {
+            // Toggle the 'flipped' class to flip the card
+            serviceElement.classList.toggle('flipped');
+        });
+
+        // Prevent the card from flipping when the close button is clicked
+        var closeButton = serviceElement.querySelector('.close-button');
+        closeButton.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+        });
+    </script>
 </body>
 </html>

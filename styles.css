@@ -3,6 +3,7 @@
     margin-right: 0;
     font-family: Raleway;
     color: #333333;
+    
 }
 .wrapper {
     text-align: center;
@@ -25,14 +26,33 @@
   margin-top: 0;
     width: 100%;
     overflow: hidden;
-    background-color: #3498db;
+    background-color: #333;
+   
 }
-
+/* HEADER / NAV BAR STYLING */
 header {
     top: 0!important;
     margin-top: 0!important;
     display: block;
 }
+
+/* Center the header_inner container */
+.header_inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_inner h3{
+  color: #fff;
+}
+
+/* Add spacing between the logo and title */
+.header_logo,
+.header_title {
+  margin-right: 20px; /* Adjust as needed */
+}
+
+
 
 .content {
     margin: 0;
@@ -54,11 +74,27 @@ header {
     align-items: center; /* Center vertically */
     justify-content: center;
     
+    
+}
+.navlogo{
+  max-height: 50px;
+  max-width: 50px;
+}
+.logo{
+  max-height: 250px;
+  max-width: 250px;
 }
 
 .landing_text {
+  padding: 0;
     text-align: center; /* Center text within .landing_text */
-  }
+    
+}
+.landingwords{
+  color: #fff;
+}
+
+
   
   /* Additional styles for your text elements */
   .landing_text h3 {
@@ -178,6 +214,11 @@ header {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
+.servicesLogo{
+  max-width: 50px;
+  max-height: 50px;
+}
+
 /* Media query for screens smaller than 768px (mobile) */
 @media (max-width: 768px) {
   .services {
@@ -185,6 +226,84 @@ header {
     margin: 10px 0; /* Add vertical spacing between stacked columns */
   }
 }
+
+/* card flip styles */
+/* Flip card styles */
+.flip-card {
+  perspective: 1000px;
+  
+  padding: 20px;
+  
+
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+/* Style for the front face (visible by default) */
+.flip-card-front {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Style for the back face (hidden by default) */
+.flip-card-back {
+  background-color: #f7f7f7;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the flip card title (you can adjust this as needed) */
+.flip-card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the flip card content (you can adjust this as needed) */
+.flip-card p {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.flip-card-front img {
+  margin-bottom: 10px; /* Adjust as needed to align the image */
+}
+
+.flip-card-front h4 {
+  margin: 0; /* Reset margin to control text alignment */
+}
+
+/* Adjust the vertical alignment of text within the back face */
+.flip-card-back p {
+  margin-top: 10px; /* Adjust as needed to align the text */
+}
+
+
 
 
 /* section 5 */
@@ -206,7 +325,7 @@ header {
 /* Default styles for the section */
 .footer {
   background-color: #333;
-  color: #fff;
+  
   padding: 20px;
 }
 
@@ -215,12 +334,17 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  
 }
 
 .footersection {
   flex: 1; /* Equal width for three columns */
   margin: 0 10px; /* Add horizontal spacing between columns */
   text-align: center;
+}
+.footersection h3{
+  color: #ffff!important;
+
 }
 
 /* Media query for screens smaller than 768px (mobile) */
