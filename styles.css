@@ -1,6 +1,8 @@
 *{
     margin-left: 0;
     margin-right: 0;
+    font-family: Raleway;
+    color: #333333;
 }
 .wrapper {
     text-align: center;
@@ -16,12 +18,15 @@
     width: 100%;
     height: 100%;
     margin: 0;
+
 }
 
-/* .wrapper_inner {
+.wrapper_inner {
+  margin-top: 0;
     width: 100%;
     overflow: hidden;
-} */
+    background-color: #3498db;
+}
 
 header {
     top: 0!important;
@@ -70,11 +75,15 @@ header {
     /* Add styles for the button */
   }
 
+  .second_landing{
+    background-color: #ffff!important;
+  }
   .second_inner{
     padding: 2rem;
     line-height: 1.5;
     max-width: 50%;
     margin: auto;
+    
   }
 
   .sellingpoints{
@@ -88,6 +97,10 @@ header {
   .callToAction{
     background-color: #e0e0e0;
     border: 1px solid #ffff;
+    height: 25vh;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center;
   }
 
 
@@ -115,6 +128,17 @@ header {
   margin: 10px;
   background-color: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.point:hover{
+  transform: scale(1.1); /* Scale the element slightly on hover */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hoverEffect:hover{
+  transform: scale(1.1); /* Scale the element slightly on hover */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Media query for screens smaller than 768px (mobile) */
@@ -158,6 +182,55 @@ header {
 @media (max-width: 768px) {
   .services {
     flex-basis: calc(100% - 20px); /* Full width for stacked columns on mobile */
+    margin: 10px 0; /* Add vertical spacing between stacked columns */
+  }
+}
+
+
+/* section 5 */
+.inner-section5{
+  background-image: url("./public/images/headinglayout.avif");
+  background-size: cover; 
+  background-position: bottom center;
+  width: 100%;
+  height: 25vh;
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center;
+}
+
+
+
+
+/* footer styles  */
+/* Default styles for the section */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.inner-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footersection {
+  flex: 1; /* Equal width for three columns */
+  margin: 0 10px; /* Add horizontal spacing between columns */
+  text-align: center;
+}
+
+/* Media query for screens smaller than 768px (mobile) */
+@media (max-width: 768px) {
+  .inner-footer {
+    flex-direction: column; /* Stack columns vertically on mobile */
+  }
+
+  .footersection {
+    flex: 0; /* Reset flex value for stacked columns */
     margin: 10px 0; /* Add vertical spacing between stacked columns */
   }
 }
