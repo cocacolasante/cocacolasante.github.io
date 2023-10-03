@@ -45,11 +45,11 @@ header {
 }
 
 .q_slider {
-    background-image: url("./public/images/headinglayout.avif");
+    background-image: url("./public/images/creek1.jpeg");
     background-size: cover; 
     background-position: center center;
     width: 100%;
-    height: 50vh;
+    height: 65vh;
     display: flex; /* Use flexbox for centering */
     align-items: center; /* Center vertically */
     justify-content: center;
