@@ -52,7 +52,34 @@ header {
   margin-right: 20px; /* Adjust as needed */
 }
 
+/* BUTTON CSS ==================================*/
 
+.calltoactionbtn {
+	box-shadow: 0px 1px 0px 0px #000000;
+	background:linear-gradient(to bottom, #06bdc0 5%, #06bdc0 100%);
+	background-color:#06bdc0;
+	border-radius:5px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:12px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #000000;
+}
+.calltoactionbtn:hover {
+	transform: translateY(-2px); /* Move the button up */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
+}
+.calltoactionbtn:active {
+	position:relative;
+	top:1px;
+}
+
+/* LANDING CONTENT ============================ */
 
 .content {
     margin: 0;
@@ -65,9 +92,9 @@ header {
 }
 
 .q_slider {
-    background-image: url("./public/images/creek1.jpeg");
+    background-image: url("./public/images/headinglayout.avif");
     background-size: cover; 
-    background-position: center center;
+    background-position: bottom center;
     width: 100%;
     height: 65vh;
     display: flex; /* Use flexbox for centering */
@@ -91,7 +118,7 @@ header {
     
 }
 .landingwords{
-  color: #fff;
+  color: #333333;
 }
 
 
@@ -129,9 +156,15 @@ header {
   .point{
     padding-top: 18px;
   }
+  .text-wrapper h3{
+    font-size: 3rem;
+  }
+  .text-wrapper p{
+    font-size: 2rem;
+  }
 
   .callToAction{
-    background-color: #e0e0e0;
+    background-color: #ffff;
     border: 2px solid #ffff;
     display: flex; /* Use flexbox for centering */
     align-items: center; /* Center vertically */
@@ -141,9 +174,16 @@ header {
     min-height: 50vh;
     border-radius: 25px;
   }
+  
+  .inner_calltoaction {
+    background-image: url("/public/images/creek1.jpeg");
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 100%; /* Set a minimum height to ensure the background image is visible */
 
-  .inner_calltoaction{
-  }
+}
+
+
   .outterCall{
     padding-top: 5px;
     padding-bottom: 5px;
@@ -155,11 +195,12 @@ header {
     border: 1px solid #ffffff;
     align-items: center; /* Center vertically */
     justify-content: center;
+    
   }
 
 
 /* SECTION 3 STYLING */
-/* Default styles for the section */
+/* Default styles for the section ========================================== */
 .section3 {
   background-color: #ffffff;
   padding: 20px;
@@ -245,8 +286,8 @@ header {
   }
 }
 
-/* card flip styles */
-/* Flip card styles */
+/* card flip styles =================================*/
+/* Flip card styles  =================================*/
 .flip-card {
   perspective: 1000px;
   
@@ -326,7 +367,7 @@ header {
 
 
 
-/* section 5 */
+/* section 5  ================================= =================================*/
 .section5{
   background-image: url("./public/images/headinglayout.avif");
   background-size: cover; 
@@ -345,7 +386,7 @@ header {
 }
 .inner-section5 p{
   
-  color: #333333;
+  color: white;
 
 }
 .section5wrapper{
@@ -354,6 +395,7 @@ header {
   justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 20px;
 }
 
 
@@ -374,16 +416,20 @@ header {
       flex-basis: 100%; /* Stacked columns on mobile */
   }
 }
+@media (max-width: 768px) {
+  .inner-section5 p {
+    color: black;
+  }
+}
 
 
 
 
 
-/* footer styles  */
+/* footer styles  ================================= ================================= */
 /* Default styles for the section */
 .footer {
   background-color: #06bec0;
-  
   padding: 20px;
 }
 
@@ -392,7 +438,6 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  
 }
 
 .footersection {
@@ -400,35 +445,11 @@ header {
   margin: 0 10px; /* Add horizontal spacing between columns */
   text-align: center;
 }
-.footersection h3{
+
+.footersection h3 {
   color: #ffff!important;
-
 }
 
-/* Media query for screens smaller than 768px (mobile) */
-@media (max-width: 768px) {
-  .inner-footer {
-    flex-direction: column; /* Stack columns vertically on mobile */
-  }
-
-  .footersection {
-    flex: 0; /* Reset flex value for stacked columns */
-    margin: 10px 0; /* Add vertical spacing between stacked columns */
-  }
-}
-
-.socialmedia{
-  display: flex;
-  justify-content: space-between;
-  max-width: 20%;
-}
-
-.socialmedia img{
-  max-height: 48px;
-}
-.socialmediaicon:hover{
-  cursor: pointer;
-}
 
 /* Media query for screens smaller than 768px (mobile) */
 @media (max-width: 768px) {
@@ -444,12 +465,20 @@ header {
   }
 
   .socialmedia {
-    max-width: 100%; /* Allow social media icons to take full width on mobile */
+    display: flex;
     justify-content: center; /* Center the social media icons horizontally */
+    margin: 20px 0; /* Add spacing between icons and other content */
   }
-  
+
   .socialmediaicon {
     margin: 0 10px; /* Add spacing between social media icons */
   }
 }
 
+.socialmedia img {
+  max-height: 48px;
+}
+
+.socialmediaicon:hover {
+  cursor: pointer;
+}
