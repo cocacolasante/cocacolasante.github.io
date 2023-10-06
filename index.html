@@ -34,7 +34,29 @@
                             <h3 class="landingwords">Applying for a grant?</h3>
                             <h1 class="landingwords">We CAN HELP!</h1>
                             <div>
-                                <button class="calltoactionbtn">Contact Us Today</button>
+                                <button class="calltoactionbtn" id="contactBtn">Contact Us Today</button>
+                                <div class="popup" id="popup">
+                                    <form action="https://formsubmit.co/colasante16@gmail.com" method="POST"  id="contactForm">
+                                        <img class="navlogo" src="./public/images/quill logo 1.png">
+                                        <p>NPO Grant Writing</p>
+                                        <h2>Contact Us</h2>
+                                        <h3>We Are Ready To Get Your Non-Profit The Funds You Need To Make A Difference!</h3>
+                                        <label  for="name">Name:</label>
+                                        <input class="inputclass" type="text" id="name" name="name" required>
+                                        <label for="email">Email:</label>
+                                        <input class="inputclass" type="email" id="email" name="email" required>
+                                        <label for="businessname">Business name:</label>
+                                        <input class="inputclass" type="text" id="businessname" name="businessname" required>
+                                        <label  for="message">Message:</label>
+                                        <input class="inputclass" type="text" id="message" name="message" required>
+                                        <br>
+                                        <input type="hidden" name="_subject" value="New Submission!"/>
+                                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou"/>
+                                        <button class="calltoactionbtn" type="submit" value="send">Submit</button>
+                                        <button class="calltoactionbtn" id="closePopup">Close</button>
+                                    </form>
+                                </div>                                
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -92,7 +114,8 @@
                         <div class="text-wrapper">
                             <h3>Every non-profit is different.</h3>
                             <p>Schedule your Free Consultation and/or Price Quote Today</p>
-                            <button class="calltoactionbtn">Get Free Quote</button>
+                            <button id="contactBtn" class="calltoactionbtn">Get Free Quote</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -269,6 +292,36 @@
             event.stopPropagation();
         });
         });
+        
+    </script>
+    <script>
+        const contactBtn = document.getElementById("contactBtn");
+        const popup = document.getElementById("popup");
+        const contactForm = document.getElementById("contactForm");
+        const popupBtn = document.getElementById("closePopup")
+            function closePopup() {
+                
+                popup.style.display = "none";
+            }
+
+            contactBtn.addEventListener("click", function () {
+                popup.style.display = "block";
+            });
+            popupBtn.addEventListener("click", function () {
+                popup.style.display = "none";
+            });
+
+            // contactForm.addEventListener("submit", function (e) {
+               
+
+            //     // You can add your email sending logic here.
+            //     // For demonstration purposes, we'll just show an alert.
+            //     alert("Form submitted successfully!");
+
+            //     // Clear the form and hide the popup
+            //     contactForm.reset();
+            //     popup.style.display = "none";
+            // });
     </script>
 </body>
 </html>

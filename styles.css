@@ -158,9 +158,15 @@ header {
   }
   .text-wrapper h3{
     font-size: 3rem;
+    color: white;
   }
   .text-wrapper p{
     font-size: 2rem;
+    color: white;
+    
+  }
+
+  .text-wrapper{
   }
 
   .callToAction{
@@ -178,10 +184,12 @@ header {
   .inner_calltoaction {
     background-image: url("/public/images/creek1.jpeg");
     background-size: cover;
-    background-position: bottom center;
+    background-position: center center;
     min-height: 100%; /* Set a minimum height to ensure the background image is visible */
-
+    min-width: 90%;
+    border-radius: 20px;
 }
+
 
 
   .outterCall{
@@ -481,4 +489,55 @@ header {
 
 .socialmediaicon:hover {
   cursor: pointer;
+}
+
+
+
+/* POP UP STYLING ====================================================== */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-height: 80vh;
+  min-width: 80%;
+
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.popup button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+.inputclass {
+  max-width: 50%;
+  margin: auto;
 }
