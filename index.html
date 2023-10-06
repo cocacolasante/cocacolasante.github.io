@@ -34,9 +34,9 @@
                             <h3 class="landingwords">Applying for a grant?</h3>
                             <h1 class="landingwords">We CAN HELP!</h1>
                             <div>
-                                <button class="calltoactionbtn" id="contactBtn">Contact Us Today</button>
-                                <div class="popup" id="popup">
-                                    <form action="https://formsubmit.co/colasante16@gmail.com" method="POST"  id="contactForm">
+                                <button class="calltoactionbtn" id="secondlandingcontactBtn">Contact Us Today</button>
+                                <!-- <div class="popup" id="popup2">
+                                    <form action="https://formsubmit.co/colasante16@gmail.com" method="POST"  id="contactForm2">
                                         <img class="navlogo" src="./public/images/quill logo 1.png">
                                         <p>NPO Grant Writing</p>
                                         <h2>Contact Us</h2>
@@ -53,9 +53,9 @@
                                         <input type="hidden" name="_subject" value="New Submission!"/>
                                         <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou"/>
                                         <button class="calltoactionbtn" type="submit" value="send">Submit</button>
-                                        <button class="calltoactionbtn" id="closePopup">Close</button>
+                                        <button class="calltoactionbtn" id="closePopup2">Close</button>
                                     </form>
-                                </div>                                
+                                </div>                                 -->
                             </div>
                             </div>
                         </div>
@@ -113,9 +113,29 @@
                     <div class="inner_calltoaction">
                         <div class="text-wrapper">
                             <h3>Every non-profit is different.</h3>
-                            <p>Schedule your Free Consultation and/or Price Quote Today</p>
-                            <button id="contactBtn" class="calltoactionbtn">Get Free Quote</button>
-                            
+                            <p>Schedule your Free Consultation Today</p>
+                            <button class="calltoactionbtn" id="contactBtn">Contact Us Today</button>
+                                <div class="popup" id="popup">
+                                    <form action="https://formsubmit.co/colasante16@gmail.com" method="POST"  id="contactForm">
+                                        <img class="navlogo" src="./public/images/quill logo 1.png">
+                                        <p class="popuptext">NPO Grant Writing</p>
+                                        <h2 class="popuptext">Contact Us</h2>
+                                        <h3 class="popuptext">We Are Ready To Get Your Non-Profit The Funds You Need To Make A Difference!</h3>
+                                        <label  for="name">Name:</label>
+                                        <input class="inputclass" type="text" id="name" name="name" required>
+                                        <label for="email">Email:</label>
+                                        <input class="inputclass" type="email" id="email" name="email" required>
+                                        <label for="businessname">Business name:</label>
+                                        <input class="inputclass" type="text" id="businessname" name="businessname" required>
+                                        <label  for="message">Message:</label>
+                                        <input class="inputclass" type="text" id="message" name="message" required>
+                                        <br>
+                                        <input type="hidden" name="_subject" value="New Submission!"/>
+                                        <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou"/> -->
+                                        <button class="calltoactionbtn" type="submit" value="send">Submit</button>
+                                        <button class="calltoactionbtn" id="closePopup">Close</button>
+                                    </form>
+                                </div>  
                         </div>
                     </div>
                 </div>
@@ -299,17 +319,34 @@
         const popup = document.getElementById("popup");
         const contactForm = document.getElementById("contactForm");
         const popupBtn = document.getElementById("closePopup")
-            function closePopup() {
-                
-                popup.style.display = "none";
-            }
+        
+        function closePopup() {
+            
+            popup.style.display = "none";
+        }
+        
+        contactBtn.addEventListener("click", function () {
+            popup.style.display = "block";
+        });
+        popupBtn.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+        const secondlandingcontactBtn = document.getElementById("secondlandingcontactBtn");
+        const popup2 = document.getElementById("popup2");
+        const contactForm2 = document.getElementById("contactForm2");
+        const popupBtn2 = document.getElementById("closePopup2")
+        
+        function closePopup() {
+            
+            popup.style.display = "none";
+        }
 
-            contactBtn.addEventListener("click", function () {
-                popup.style.display = "block";
-            });
-            popupBtn.addEventListener("click", function () {
-                popup.style.display = "none";
-            });
+        secondlandingcontactBtn.addEventListener("click", function () {
+            popup.style.display = "block";
+        });
+        popup2.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
 
             // contactForm.addEventListener("submit", function (e) {
                

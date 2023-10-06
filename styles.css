@@ -203,6 +203,7 @@ header {
     border: 1px solid #ffffff;
     align-items: center; /* Center vertically */
     justify-content: center;
+    background-color: #06bdc0;
     
   }
 
@@ -508,10 +509,12 @@ header {
   padding: 20px;
   text-align: center;
   z-index: 999;
+  color: #333333;
 }
 
 .popup h2 {
   margin-top: 0;
+  
 }
 
 .popup label {
@@ -536,7 +539,9 @@ header {
 .popup button:hover {
   background-color: #0056b3;
 }
-
+.popuptext{
+  color: black!important;
+}
 .inputclass {
   max-width: 50%;
   margin: auto;
